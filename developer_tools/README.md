@@ -37,17 +37,39 @@ By the end of this project, I will have covered the following topics and tools:
 ---
 
 ## Tasks
-Many of the tasks are in png format, as they are screenshots of the completed prompt to manipulate styles and elements of the webpage. The screenshots can be used as a comparison to the original untouched [page](https://intranet.atlasschool.com/rltoken/XDJc8x9X5FRGgi01_vRDkg)
+Many of the tasks are in png format, as they are screenshots of the completed prompt to manipulate styles and elements of the webpage. The screenshots can be used as a comparison to the original untouched [page](https://intranet.atlasschool.com/rltoken/XDJc8x9X5FRGgi01_vRDkg).
 
 
 ### Highlighted Tasks
 
 2. **Force element state**
 	- Prompt: Force the hover state of the “cake” block in the section Portfolio. Take a screenshot of it.
-	- [Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/2-pathways_menu.png)
+	- [Completed Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/2-pathways_menu.png)
 
 4. **Change button styles**
 	- Prompt: 
 		- All primary buttons (btn-primary) should have the #0080ee color as a background color.
 		- All outlined buttons light (btn-outline-light) should have #0020aa for the text color.
-	- [Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/4-new_buttons.png)
+	- [Completed Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/4-new_buttons.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Authors/Contributors to this project!
+This README was made with :heart: by Allison Binger, student at Atlas School Tulsa.
+[GitHub](https://github.com/allisonabinger)
+[LinkedIn](https://linkedin.com/in/allisonbinger)
