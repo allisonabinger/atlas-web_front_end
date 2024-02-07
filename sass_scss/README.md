@@ -38,12 +38,12 @@ This project is focused on practicing Sass basics, flow control directives, and 
 - Use nested definitions in Sass/SCSS to nest CSS rules within each other, which can improve readability and maintainability. 
 - Example:
 ```
-	.container {
-		width: 100%;
-		.box {
-			background-color: #bff;
-		}
+.container {
+	width: 100%;
+	box {
+		background-color: #bff;
 	}
+}
 
 ```
 - The code block aboves shows the nesting capability of defining a style to a box within a container.
@@ -54,19 +54,19 @@ This project is focused on practicing Sass basics, flow control directives, and 
 - Mixins are defined using the `@mixin` directive followed by a name and a block of CSS declarations. They are included in other rules using the `@include` directive followed by the name of the mixin. They can also accept parameters, which allow customization of the styles they generate.
 - Example: 
 ```
-	@mixin border-radius($radius) {
-		border-radius: $radius;
-	}
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
 
-	.btn {
-		@include border-radius(5px);
-	}
+.btn {
+	@include border-radius(5px);
+}
 ```
 - The above code block uses the mixin `border-radius`, which accepts a parameter `$radius` and applies the value to the specified property. It is then used in the .btn class using the `@include` directive.
 &nbsp;
 
 ### Manipulate Operators
-- You can manipulate operators in Sass/SCSS using arithmetic operations like `+, `-`, `*`, `/`, or `%`. This can be done to perform calculations on numeric values.
+- You can manipulate operators in Sass/SCSS using arithmetic operations like `+`, `-`, `*`, `/`, or `%`. This can be done to perform calculations on numeric values.
 
 ## Highlighted Tasks
 Below are links to highlighted or unique tasks that I enjoyed in this project.
