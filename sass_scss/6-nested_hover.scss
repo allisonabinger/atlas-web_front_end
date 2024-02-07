@@ -1,0 +1,10 @@
+// Use nested declarations to assign various styles
+$color-FF: #FF0000;
+$color-00: #00FF00;
+
+button {
+	color: $color-FF;
+	button:hover {
+		color: $color-00;
+	}
+}
