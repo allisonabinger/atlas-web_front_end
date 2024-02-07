@@ -1,0 +1,6 @@
+// Creates classes for each name in the $list-names and assigns styles
+@import '11-photos';
+
+@each $name in $list-names {
+    background-image: "photos/#{$name}.jpeg";
+  }
