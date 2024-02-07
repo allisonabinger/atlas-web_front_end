@@ -1,0 +1,8 @@
+// SCSS file that assigns the text color #3D3D3D to the HTML tags `body` and `p`
+$new-color: #3D3D3D; // declare variable with specified color
+body {
+	color: $new-color; // apply color to element
+}
+p {
+	color: $new-color; // apply color to element
+}
