@@ -1,1 +1,11 @@
-// Define a mixin for left
+// Define a mixin for to assign margin styles
+@mixin assignMargins($left, $right) {
+	margin-left: $left;
+	margin-right: $right;
+}
+body {
+	@include assignMargins(10px, 10px)
+}
+div {
+	@include assignMargins(15px, 15px)
+}
