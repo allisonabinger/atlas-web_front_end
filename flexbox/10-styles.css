@@ -403,6 +403,8 @@
 	flex-wrap: wrap;
  }
  /* Section ABOUT US ============================= */
+
+ /* targets all classes that begin with col- inside of the section-about-us class */
  .section-about-us [class^="col-"] {
   align-self: center;
  }
