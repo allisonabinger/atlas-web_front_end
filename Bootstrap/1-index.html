@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Holberton - Web Stack - Bootstrap</title>
+        <meta name="description" content="Bootstrap is a free and open-source CSS framework">
+				<!-- Bootstrap CSS Stylesheet -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+			<div class="container">
+				<!-- Row 1: Equal spacing, < 992px displays 4 lines in one column -->
+        <div class="row" id="row1">
+            <div class="col-lg-3 bg-primary text-white text-center p-2">Primary</div>
+            <div class="col-lg-3 bg-success text-white text-center p-2">Success</div>
+            <div class="col-lg-3 bg-danger text-white text-center p-2">Danger</div>
+            <div class="col-lg-3 bg-warning text-white text-center p-2">Warning</div>
+        </div>
+
+        <hr />
+				<!-- Row 2: equal spacing, < 576px displays 4 lines in one column -->
+        <div class="row" id="row2">
+            <div class="col-sm-3 bg-primary text-white text-center p-2">Primary</div>
+            <div class="col-sm-3 bg-success text-white text-center p-2">Success</div>
+            <div class="col-sm-3 bg-danger text-white text-center p-2">Danger</div>
+            <div class="col-sm-3 bg-warning text-white text-center p-2">Warning</div>
+        </div>
+
+        <hr />
+				<!-- Row 3: < 992px displays 3 lines in column. Last cell is 50% of screen, middle has 2x size of first. -->
+        <div class="row" id="row3">
+            <div class="col-lg-2 bg-primary text-white text-center p-2">Primary</div>
+            <div class="col-lg-4 bg-success text-white text-center p-2">Success</div>
+            <div class="col-lg-6 bg-danger text-white text-center p-2">Danger</div>
+        </div>
+
+        <hr />
+				<!-- Row 4: >= 1200px displays P,S,D,W. 992-1200px displays W, P, S, D. 768-992 displays D,W,P,S. <= 768px displays S, D, W, P. -->
+        <div class="row" id="row4">
+            <div class="col bg-primary text-white text-center p-2 order-xl-1 order-lg-2- order-md-3 order-sm-4">Primary</div>
+            <div class="col bg-success text-white text-center p-2 order-xl-2 order-lg-3 order-md-4 order-sm-1">Success</div>
+            <div class="col bg-danger text-white text-center p-2 order-xl-3 order-lg-4 order-md-1 order-sm-2">Danger</div>
+            <div class="col bg-warning text-white text-center p-2 order-xl-4 order-lg-1 order-md-2 order-sm-3">Warning</div>
+        </div>
+
+        <hr/>
+				<!-- Row 5: equal width, ~16% of screen. < 768px 2 lines in column, >= 768px displays 2 columns on either side of screen -->
+        <div class="row justify-content-between" id="row5">
+            <div class="col-md-2 bg-primary text-white text-center p-2 width-">Primary</div>
+            <div class="col-md-2 bg-success text-white text-center p-2">Success</div>
+        </div>
+
+        <hr/>
+				<!-- Row 6: equal width, ~16% of screen. >= 768px display 3 col, space between 1 and 2 is 2x than space between 2 and 3. <768px: display in one column -->
+        <div class="row" id="row6">
+            <div class="col-md-2 bg-primary text-white text-center p-2">Primary</div>
+            <div class="col-md-2 offset-md-4 bg-success text-white text-center p-2">Success</div>
+            <div class="col-md-2 offset-md-2 bg-danger text-white text-center p-2">Danger</div>
+        </div>
+			</div>
+    </body>
+</html>
