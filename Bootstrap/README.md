@@ -1,75 +1,41 @@
-# Sass // SCSS
+# Bootstrap ![image](https://github.com/allisonabinger/atlas-web_front_end/assets/127708538/a853695c-42b9-4c77-8a98-7dde4c3969fc)
+
 
 ## Intro
-This project is focused on practicing Sass basics, flow control directives, and references.
+Bootstrap is a free and open-source CSS framework developed by Twitter (X) directed as responsive, mobile-first front-end web development. It contains CSS and JavaScript design templates for typography, forms, buttons, navigation, and other interface components. 
 
+In this project, I was given an HTML file as a template, and tasked to use different bootstrap methods to adjust the appearance of the web page. 
 
+This project uses Bootstrap version 4.4.1
 
 ## Learning Objectives
 
-1. **What is Sass and ScSS, and what are the differences?**
+1. **Usage of Containers**
 
-2. **Sass preprocessing**
+2. **Usage of the Grid System**
 
-3. **Variable Declaration**
+3. **Usage of Components**
 
-4. **Nested Definition**
-
-5. **Mixins**
-
-6. **Manipulate Operators**
+4. **Usage of Utilitiesn**
 
 ---
-### What is SCSS/Sass?
--	**SCSS (Sassy CSS)** is a preprocessor scripting language that is interpreted or compiled into CSS. It adds mechanics like variables, nesting, and mixings to regular CSS.
--	**Sass** is an older syntax, but SCSS is more widely used and is often the preferred syntax. They are very similar, but SCSS is more like CSS with curly braces and semicolons, which can be easier for those more familiar with CSS.
-&nbsp;
 
-### Sass preprocessing
--	Sass preprocessing is the process of converting Sass or SCSS files into standard CSS files. This can be done using a preprocessor tool to add features and functionality to CSS. All of the scss files will be converting using `sass`.
-&nbsp;
+## Highlighted Bootstrap Mechanics
 
-### Variable Declaration
-- Variables are declared in Sass/SCSS using the `$` symbol followed by the variable name and value.
-- Example: `$primary-color: #007bff`
-&nbsp;
+[Bootstrap Containers](https://www.w3schools.com/bootstrap4/bootstrap_containers.asp)
 
-### Nested Definition
-- Use nested definitions in Sass/SCSS to nest CSS rules within each other, which can improve readability and maintainability. 
-- Example:
-```
-.container {
-	width: 100%;
-	box {
-		background-color: #bff;
-	}
-}
+[Bootstrap Grid System](https://www.w3schools.com/bootstrap4/bootstrap_grid_basic.asp)
 
-```
-- The code block aboves shows the nesting capability of defining a style to a box within a container.
-&nbsp;
+[Bootstrap Tables](https://www.w3schools.com/bootstrap4/bootstrap_tables.asp)
 
-### Mixins
-- Mixins are reusable blocks of CSs declarations that can be included (or 'mixed-in') in other CSS rules. They operate like functions in programming languages, allowing encapsulation of a set of styles and apply them to multiple selectors or rules.
-- Mixins are defined using the `@mixin` directive followed by a name and a block of CSS declarations. They are included in other rules using the `@include` directive followed by the name of the mixin. They can also accept parameters, which allow customization of the styles they generate.
-- Example: 
-```
-@mixin border-radius($radius) {
-	border-radius: $radius;
-}
+[Bootstrap List Groups](https://www.w3schools.com/bootstrap4/bootstrap_list_groups.asp)
 
-.btn {
-	@include border-radius(5px);
-}
-```
-- The above code block uses the mixin `border-radius`, which accepts a parameter `$radius` and applies the value to the specified property. It is then used in the .btn class using the `@include` directive.
-&nbsp;
+[Bootstrap Modals](https://www.w3schools.com/bootstrap4/bootstrap_modal.asp)
 
-### Manipulate Operators
-- You can manipulate operators in Sass/SCSS using arithmetic operations like `+`, `-`, `*`, `/`, or `%`. This can be done to perform calculations on numeric values.
+[Bootstrap Forms](https://www.w3schools.com/bootstrap4/bootstrap_forms.asp)
 
-## Highlighted Tasks
-Below are links to highlighted or unique tasks that I enjoyed in this project.
+[Bootstrap Utilities](https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp)
+
 
 
 ## Authors/Contributors to this project
