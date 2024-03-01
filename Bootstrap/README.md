@@ -1,4 +1,4 @@
-# Bootstrap ![image](https://github.com/allisonabinger/atlas-web_front_end/assets/127708538/a853695c-42b9-4c77-8a98-7dde4c3969fc)
+# Bootstrap ![Bootstrap Logo](https://github.com/allisonabinger/atlas-web_front_end/assets/127708538/a853695c-42b9-4c77-8a98-7dde4c3969fc | width=100)
 
 
 ## Intro
