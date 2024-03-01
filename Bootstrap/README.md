@@ -1,4 +1,4 @@
-# Bootstrap ![bootstrap logo](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png =100x100)
+# Bootstrap ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png =100x100)
 
 
 ## Intro
