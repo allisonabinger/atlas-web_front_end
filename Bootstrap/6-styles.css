@@ -41,6 +41,7 @@ a .text-dark:hover, a.text-dark:focus {
 /* Card (card container, but also header/footer) has border color set to #E0003C and radius to 1rem */
 
 .card, .card-header, .card-footer {
+	border: 1px solid var(--color-primary);
 	border-color: var(--color-primary);
 	border-radius: 1rem;
 	overflow: hidden; /* prevents background color from seeping over border. */
@@ -53,6 +54,10 @@ a .text-dark:hover, a.text-dark:focus {
 	background-color: var(--color-primary);
 }
 
+.card-header:first-child {
+	border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+
 /* .text-muted has text color set to #8C8C8C */
 
 .text-muted {
@@ -61,5 +66,6 @@ a .text-dark:hover, a.text-dark:focus {
 
 /* NOT LISTED IN STYLES, BUT SHOWN IN EXAMPLE ======= */
 .border-bottom {
+	border-bottom: 1px solid;
 	border-color: var(--color-primary) !important;
 }
