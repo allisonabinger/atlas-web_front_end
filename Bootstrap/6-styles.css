@@ -33,6 +33,11 @@ a, a:hover, a:focus {
 	color: var(--color-primary);
 }
 
+a .text-dark:hover, a.text-dark:focus {
+	color: var(--color-primary) !important;
+	text-decoration: none;
+}
+
 /* Card (card container, but also header/footer) has border color set to #E0003C and radius to 1rem */
 
 .card, .card-header, .card-footer {
