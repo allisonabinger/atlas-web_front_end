@@ -15,17 +15,17 @@
         <div class="container-lg bg-light p-3">
             <h1 class="my-4">Bob Dylan</h1>
 
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item ">
-                    <a class="nav-link active" href="#Introduction" data-toggle="tab" >Introduction</a>
+                    <a class="nav-link active" href="#Introduction" data-toggle="tab" role="tab">Introduction</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Discography" data-toggle="tab">Discography</a>
+                    <a class="nav-link" href="#Discography" data-toggle="tab" role="tab">Discography</a>
                 </li>
             </ul>
             <div class="bg-white tab-content p-3">
 
-                <div id="Introduction" class="tab-pane active">
+                <div id="Introduction" class="tab-pane active show fade" role="tabpanel">
                     <p>
                         Bob Dylan (born Robert Allen Zimmerman; May 24, 1941) is an American singer-songwriter, author, and visual artist who has been a major figure in popular culture for more than fifty years. 
                     </p>
@@ -35,11 +35,11 @@
                     </p>
                 </div>
 
-                <div id="Discography" class="tab-pane fade">
+                <div id="Discography" class="tab-pane fade" role="tabpanel">
                     <ul class="list-group list-unstyled">
                         <li class="list-group-item">
-                            <a href="#Album1" data-toggle="collapse">Bob Dylan <em>(1962)</em></a>
-                            <div class="collapse" id="Album1">
+                            <a href="#Album1" data-toggle="collapse" type="button" data-target="#Album1">Bob Dylan <em>(1962)</em></a>
+                            <div class="collapse" id="Album1" data-parent="#Discography">
                                 <p>
                                     Bob Dylan is the debut studio album by American singer-songwriter Bob Dylan, released on March 19, 1962 by Columbia Records. Produced by Columbia's legendary talent scout John H. Hammond, who signed Dylan to the label, the album features folk standards, plus two original compositions, "Talkin' New York" and "Song to Woody".
                                 </p>
@@ -47,8 +47,8 @@
                         </li>
 
                         <li class="list-group-item">
-                            <a href="#Album2" data-toggle="collapse">The Freewheelin' Bob Dylan <em>(1963)</em></a>
-                            <div class="collapse" id="Album2">
+                            <a href="#Album2" data-toggle="collapse" type="button" data-target="#Album2">The Freewheelin' Bob Dylan <em>(1963)</em></a>
+                            <div class="collapse" id="Album2" data-parent="#Discography">
                                 <p>
                                     The Freewheelin' Bob Dylan is the second studio album by American singer-songwriter Bob Dylan, released on May 27, 1963 by Columbia Records. Whereas his self-titled debut album Bob Dylan had contained only two original songs, Freewheelin' represented the beginning of Dylan's writing contemporary words to traditional melodies. Eleven of the thirteen songs on the album are Dylan's original compositions. The album opens with "Blowin' in the Wind", which became an anthem of the 1960s, and an international hit for folk trio Peter, Paul & Mary soon after the release of Freewheelin'. The album featured several other songs which came to be regarded as among Dylan's best compositions and classics of the 1960s folk scene: "Girl from the North Country", "Masters of War", "A Hard Rain's a-Gonna Fall" and "Don't Think Twice, It's All Right".
                                 </p>
@@ -56,8 +56,8 @@
                         </li>
 
                         <li class="list-group-item">
-                            <a href="#Album3" data-toggle="collapse">The Times They Are a-Changin' <em>(1964)</em></a>
-                            <div class="collapse" id="Album3">
+                            <a href="#Album3" data-toggle="collapse" type="button" data-target="#Album3">The Times They Are a-Changin' <em>(1964)</em></a>
+                            <div class="collapse" id="Album3" data-parent="#Discography">
                                 <p>
                                     The Times They Are a-Changin' is the third studio album by American singer-songwriter Bob Dylan, released on January 13, 1964 by Columbia Records. Whereas his previous albums Bob Dylan and The Freewheelin' Bob Dylan consisted of original material among cover songs, Dylan's third album was the first to feature only original compositions. The album consists mostly of stark, sparsely arranged ballads concerning issues such as racism, poverty, and social change. The title track is one of Dylan's most famous; many feel that it captures the spirit of social and political upheaval that characterized the 1960s.
                                 </p>
@@ -65,8 +65,8 @@
                         </li>
 
                         <li class="list-group-item">
-                            <a href="#Album4" data-toggle="collapse">Another Side of Bob Dylan <em>(1964)</em></a>
-                            <div class="collapse" id="Album4">
+                            <a href="#Album4" data-toggle="collapse" type="button" data-target="#Album4">Another Side of Bob Dylan <em>(1964)</em></a>
+                            <div class="collapse" id="Album4" data-parent="#Discography">
                                 <p>
                                     Another Side of Bob Dylan is the fourth studio album by American singer and songwriter Bob Dylan, released on August 8, 1964 by Columbia Records.
                                 </p>
