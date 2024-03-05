@@ -6,7 +6,7 @@
 	--color-primary: #E0003C;
 	--color-btn-hover: #BC1340;
 	--color-text-muted: #8C8C8C;
-	--color-white: #fff;
+	--color-white: #FFFFFF;
 }
 
 
@@ -16,8 +16,12 @@
 	background-color: var(--color-primary);
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
 	background-color: var(--color-btn-hover);
+	color: var(--color-white);
+	border-color: var(--color-btn-hover);
 }
 
 /* btn-outline-primary has text and border color set to #E0003C */
@@ -27,24 +31,39 @@
 	border-color: var(--color-primary);
 }
 
+.btn-outline-primary:hover {
+	color: var(--color-white);
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+
+
 /* a link (no matter which color forced) has text color set to #E0003C normally, in hover and in focus */
 
 a, a:hover, a:focus {
 	color: var(--color-primary);
 }
 
-a .text-dark:hover, a.text-dark:focus {
+a .text-dark:hover,
+a.text-dark:focus {
 	color: var(--color-primary) !important;
 	text-decoration: none;
 }
 
 /* Card (card container, but also header/footer) has border color set to #E0003C and radius to 1rem */
 
-.card, .card-header, .card-footer {
+.card {
 	border: 1px solid var(--color-primary);
-	border-color: var(--color-primary);
 	border-radius: 1rem;
-	overflow: hidden; /* prevents background color from seeping over border. */
+}
+
+.card-header,
+.card-footer {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	/* border-radius: 1rem;
+	overflow: hidden;  */
+	/* prevents background color from seeping over border. */
 }
 
 /* NOT LISTED IN STYLES, BUT SHOWN IN EXAMPLE ======= */
@@ -69,4 +88,3 @@ a .text-dark:hover, a.text-dark:focus {
 	border-bottom: 1px solid;
 	border-color: var(--color-primary) !important;
 }
-
