@@ -1,29 +1,33 @@
   <h1 align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" align="left" width="50">
-    Bootstrap
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" align="right" width="50"></h1>
+  <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/original/javascript-logo-javascript-icon-transparent-free-png.png" align="left" width="50">
+    Javascript - Advanced
+  <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/original/javascript-logo-javascript-icon-transparent-free-png.png" align="right" width="50"></h1>
 
 
 ## Intro
-Bootstrap is a free and open-source CSS framework developed by Twitter (X) directed as responsive, mobile-first front-end web development. It contains CSS and JavaScript design templates for typography, forms, buttons, navigation, and other interface components. 
+JavaScript is a scripting or programming language that allows you to implement complex features on web pages. I've found comparing the web page to a human body can differentiate on what the components can do. In the context of a person, HTMl is the bones, CSS is the skin and hair, and Javascript is the brain and muscle.
 
-In this project, I was given an HTML file as a template, and tasked to use different bootstrap methods to adjust the appearance of the web page. 
+This Directory is a warm up on Javascript to get started on larger projects. 
 
-This project uses Bootstrap version 4.4.1
 
 ## Learning Objectives
 
-1. **Usage of Containers**
+1. **What is lexical scoping in JavaScript**
 
-2. **Usage of the Grid System**
+2. **What is closure in JavaScript, and how do you use it?**
 
-3. **Usage of Components**
+3. **How to chain different closures, and how to simulate private methods with Closure**
 
-4. **Usage of Utilitiesn**
+4. **The execution stack order with JavaScript**
+   
+5. **How to use callbacks**
 
 ---
 
-## Highlighted Bootstrap Mechanics
+## Highlighted Javascript Mechanics
+
+
+(Used Bootstrap README as template. Need to update these from Bootstrap to JS)
 
 [Bootstrap Containers](https://www.w3schools.com/bootstrap4/bootstrap_containers.asp)
 
