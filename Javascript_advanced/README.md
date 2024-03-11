@@ -29,9 +29,31 @@ This Directory is a warm up on Javascript to get started on larger projects.
 
 (Used Bootstrap README as template. Need to update these from Bootstrap to JS)
 
-[Bootstrap Containers](https://www.w3schools.com/bootstrap4/bootstrap_containers.asp)
 
-[Bootstrap Grid System](https://www.w3schools.com/bootstrap4/bootstrap_grid_basic.asp)
+
+## [JavaScript Lexical Scoping](https://www.w3schools.com/js/js_scope.asp)
+
+Lexical scoping is a fundamental concept in JavaScript that determines the scope of a variabled based on its location within the source code. It is how variable names are resolved during runtime based on where they are declared. Scope refers to the context in which variables are accessible. Before ES6, they were either global or local. ES6 introduced block scope, which is provided using the keywords `let` and `const`. Variables declared inside a `{ }` block cannot be accessed from outside the block, unless they use the `var` keyword. 
+
+### Example
+```
+{
+	let x = 2;
+}
+
+(x cannot be used here)
+```
+```
+{
+	var x = 2;
+}
+
+(x CAN be used here)
+```
+
+## [JavaScript Closures](https://www.w3schools.com/js/js_function_closures.asp)
+
+
 
 [Bootstrap Tables](https://www.w3schools.com/bootstrap4/bootstrap_tables.asp)
 
