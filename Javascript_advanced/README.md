@@ -53,19 +53,33 @@ Lexical scoping is a fundamental concept in JavaScript that determines the scope
 
 ## [JavaScript Closures](https://www.w3schools.com/js/js_function_closures.asp)
 
+A closure is a combination of a function and the lexical environment within which that function was declared. The environment will consist of any local variables that were in-scope at the time the closure was created. Closures allow a function to retain access to its surrounding scope even after the execution has moved out of that scope. 
 
+```
+function outer() {
+	var message = "Hello from outer!"
 
-[Bootstrap Tables](https://www.w3schools.com/bootstrap4/bootstrap_tables.asp)
+	function inner() {
+		// Inner function has access to the mesage variable.
+		alert(message); 
+	}
 
-[Bootstrap List Groups](https://www.w3schools.com/bootstrap4/bootstrap_list_groups.asp)
+	// Return the inner function
+	return inner;
 
-[Bootstrap Modals](https://www.w3schools.com/bootstrap4/bootstrap_modal.asp)
+}
 
-[Bootstrap Forms](https://www.w3schools.com/bootstrap4/bootstrap_forms.asp)
+// Call outer to get the inner function
+var closureAlert = outer();
 
-[Bootstrap Utilities](https://www.w3schools.com/bootstrap4/bootstrap_utilities.asp)
+// closureAlert contains inner function and its surrounding scope
+// Calling closureAlert will still have access to the message variable
 
+closureAlert();
 
+```
+
+Closures are useful for preserving state across multiple function calls, creating private variables, and implementing data hiding.
 
 ## Authors/Contributors to this project
 This README was made with :heart: by Allison Binger, student at Atlas School Tulsa. Find me on [GitHub](https://github.com/allisonabinger) or [LinkedIn](https://linkedin.com/in/allisonbinger)! :smile_cat:
