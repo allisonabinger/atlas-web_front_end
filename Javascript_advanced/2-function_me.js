@@ -1,4 +1,4 @@
-// welcomeMessage accepts one argument fullName, which creates a closure for an alert displaying "Welcome <fullname>"
+// Using closures to let a variable be assigned to a function, and not have it be executed immediately.
 
 function welcomeMessage(fullName) {
 	return function() {
