@@ -1,4 +1,4 @@
-
+// createClassRoom creates an array of student seats when passed a number of students
 function createClassRoom(numberOfStudents) {
 	
 	function studentSeat(seat) {
