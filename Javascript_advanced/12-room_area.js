@@ -10,3 +10,5 @@ const roomDimensions = {
 
 // Binds the object roomDimensions to the getArea function
 const boundGetArea = roomDimensions.getArea.bind(roomDimensions);
+
+console.log(boundGetArea()); // since the method was bound, 'this' was not lost.
