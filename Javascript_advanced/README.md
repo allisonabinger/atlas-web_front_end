@@ -103,7 +103,7 @@ The [window object](https://www.w3schools.com/js/js_window.asp) allows for code 
 
 ### `setTimeout`
 
-`setTimeout` executes a function after waiting a specified number of milliseconds. It can be used to change the stack order. It takes a callback function that will be placed at the end of the execution stack, and a delay in milliseconds, which will allow other synchronous code to execute first. 
+`setTimeout()` executes a function after waiting a specified number of milliseconds. It can be used to change the stack order. It takes a callback function that will be placed at the end of the execution stack, and a delay in milliseconds, which will allow other synchronous code to execute first. 
 
 Usage: `setTimeout(function, milliseconds)`
 
@@ -111,16 +111,40 @@ This method can be seen in some files, but the best example is in [11-prime.js](
 
 ### `setInterval`
 
-`setInterval` is the same as `setTimeout`, but it repeats the execution of the function continously at every given time-interval given. The first parameter is the function to be executed, and the second parameter is the length of the time-interval between each execution in milliseconds. 
+`setInterval()` is the same as `setTimeout`, but it repeats the execution of the function continously at every given time-interval given. The first parameter is the function to be executed, and the second parameter is the length of the time-interval between each execution in milliseconds. 
 
 Usage: `setInterval(function, milliseconds)`
 
 This method was not used in this project.
 
 &nbsp;
-&nbsp;
-&nbsp;
 ---
+&nbsp;
+
+## JavaScript Binding
+[*click to learn more](https://www.w3schools.com/js/js_function_bind.asp)
+
+The `bind()` method allows an object to borrow a method from another object. Sometimes the `bind()` method has to be used to prevent losing `this`. When a function is used as a callback, `this` is lost. 
+
+```
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+let fullName = person.fullName.bind(member);
+```
+
+In this example, the `member` object borrows the `fullname()` method from the `person` object.
+
 ---
 
 ## Authors/Contributors to this project
