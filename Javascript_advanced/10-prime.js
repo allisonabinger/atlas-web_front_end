@@ -1,4 +1,4 @@
-// Logs the performance time of executing countPrimeNumbers
+// Logs the performance time of executing countPrimeNumbers 100 times
 
 // isPrime helper function
 function isPrime(num) {
@@ -18,7 +18,6 @@ function countPrimeNumbers() {
 
 // Measuring execution time
 const startTime = performance.now(); // startTime to show difference before and after
-countPrimeNumbers();
+Array.from({length: 100}).forEach(() => countPrimeNumbers()); // creates an array with 100 undefined elements, executes countPrimeNumbers for each element.
 const endTime = performance.now(); // endTime to show difference before and after
-
 console.log(`Execution time of printing countPrimeNumbers was ${endTime - startTime} milliseconds.`);
