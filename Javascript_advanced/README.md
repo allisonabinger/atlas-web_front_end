@@ -81,5 +81,19 @@ closureAlert();
 
 Closures are useful for preserving state across multiple function calls, creating private variables, and implementing data hiding.
 
+## [JavaScript Call Stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack)
+
+A call stack is how an interpreter keeps track of its place in a script that calls multiple functions. When a script calles a function, the interpreter adds it to the call stack, then carries out the function. Any functions that are called by that function are added further up and run where their calls are reached. When the current function is finished, the interpreter takes it off the stack and resumes execution where it left off in the last code listing. If the stack takes up more space than it was assigned, a "stack overflow" error is thrown. 
+
+## [JavaScript Timing Events](https://www.w3schools.com/js/js_timing.asp)
+
+The [window object](https://www.w3schools.com/js/js_window.asp) allows for code to be executed at specified time intervals. The two methods used most in JavaScript for this practice is `setTimeout` and `setInterval`
+
+### `setTimeout`
+
+`setTimeout` executes a function after waiting a specified number of milliseconds. It can be used to change the stack order. It takes a callback function that will be placed at the end of the execution stack, and a delay, which will allow other synchronous code to execute first. 
+
+This can be see in [11-prime.js](/11-prime.js)
+
 ## Authors/Contributors to this project
 This README was made with :heart: by Allison Binger, student at Atlas School Tulsa. Find me on [GitHub](https://github.com/allisonabinger) or [LinkedIn](https://linkedin.com/in/allisonbinger)! :smile_cat:
