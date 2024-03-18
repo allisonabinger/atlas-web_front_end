@@ -124,8 +124,7 @@ This method was not used in this project.
 ## JavaScript Binding
 [*click to learn more](https://www.w3schools.com/js/js_function_bind.asp)
 
-The `bind()` method allows an object to borrow a method from another object. Sometimes the `bind()` method has to be used to prevent losing `this`. When a function is used as a callback, `this` is lost. 
-
+The `bind()` method allows an object to borrow a method from another object.
 ```
 const person = {
   firstName:"John",
@@ -142,8 +141,28 @@ const member = {
 
 let fullName = person.fullName.bind(member);
 ```
-
 In this example, the `member` object borrows the `fullname()` method from the `person` object.
+
+Sometimes the `bind()` method has to be used to prevent losing `this`. When a function is used as a callback, `this` is lost. 
+```
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  display: function () {
+    let x = document.getElementById("demo");
+    x.innerHTML = this.firstName + " " + this.lastName;
+  }
+}
+
+setTimeout(person.display, 3000);
+```
+This will try to display the person after 3 seconds, but it will display `undefined`. Let's use `bind` to bind `person.display`:
+
+```
+let display = person.display.bind(person);
+setTimeout(display, 3000);
+```
+Now, the example will display the person name!
 
 ---
 
