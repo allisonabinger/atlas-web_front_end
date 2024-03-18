@@ -1,48 +1,48 @@
-// Started with class, changed to function, should I make this a module with export? 
+// Hogwarts themed module with private and public methods.
 
-function studentHogwarts() {
+class studentHogwarts {
+	// initialize variables
+	#privateScore = 0;
+	#name = null;
 
-	// Variables, should these be private?
-  let privateScore = 0;
-  let name = null;
+	// methods to change score
+	#changeScoreBy(points) {
+		this.#privateScore += points;
+	}
 
-  function changeScoreBy(points) {
-    privateScore += points;
-  }
+	setName(newName) {
+		this.#name = newName;
+	}
 
-  return {
-    setName: function(newName) {
-      name = newName;
-    },
+	rewardStudent() {
+		this.#changeScoreBy(1);
+	}
 
-    rewardStudent: function() {
-      changeScoreBy(1);
-    },
+	penalizeStudent() {
+		this.#changeScoreBy(-1);
+	}
 
-    penalizeStudent: function() {
-      changeScoreBy(-1);
-    },
-
-    getScore: function() {
-      return `${name}: ${privateScore}`;
-    }
-  }
+	// method to print student and their score
+	getScore() {
+		return `${this.#name}: ${this.#privateScore}`;
+	}
 }
 
-let harry = studentHogwarts();
-harry.setName('Harry');
-harry.rewardStudent();
-harry.rewardStudent();
-harry.rewardStudent();
-harry.rewardStudent();
+// harry, instance of studentHogwarts.
 
+const harry = new studentHogwarts();
+harry.setName("Harry");
+harry.rewardStudent();
+harry.rewardStudent();
+harry.rewardStudent();
+harry.rewardStudent();
 console.log(harry.getScore());
 
-let draco = studentHogwarts();
-draco.setName('Draco');
+// draco, instance of studentHogwarts.
+const draco = new studentHogwarts();
+draco.setName("Draco");
 draco.rewardStudent();
 draco.penalizeStudent();
 draco.penalizeStudent();
 draco.penalizeStudent();
-
 console.log(draco.getScore());
