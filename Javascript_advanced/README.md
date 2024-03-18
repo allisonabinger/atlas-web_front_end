@@ -93,7 +93,7 @@ The [window object](https://www.w3schools.com/js/js_window.asp) allows for code 
 
 `setTimeout` executes a function after waiting a specified number of milliseconds. It can be used to change the stack order. It takes a callback function that will be placed at the end of the execution stack, and a delay, which will allow other synchronous code to execute first. 
 
-This can be see in [11-prime.js](/11-prime.js)
+This can be see in [11-prime.js](/JavaScript_advanced/11-prime.js)
 
 ## Authors/Contributors to this project
 This README was made with :heart: by Allison Binger, student at Atlas School Tulsa. Find me on [GitHub](https://github.com/allisonabinger) or [LinkedIn](https://linkedin.com/in/allisonbinger)! :smile_cat:
