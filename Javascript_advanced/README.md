@@ -87,6 +87,7 @@ Closures are useful for preserving state across multiple function calls, creatin
 &nbsp;
 ---
 &nbsp;
+
 ## JavaScript Call Stack
 [*click to learn more*](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack)
 
@@ -162,7 +163,9 @@ This will try to display the person after 3 seconds, but it will display `undefi
 let display = person.display.bind(person);
 setTimeout(display, 3000);
 ```
-Now, the example will display the person name!
+Now, the example will display the person name! 
+
+This method was used in [12-room_area.js](/Javascript_advanced/12-room_area.js)
 
 ---
 
