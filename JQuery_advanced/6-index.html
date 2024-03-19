@@ -1,0 +1,77 @@
+<!-- Task 1: Creating a DOM element: Using the append keyword, create a p HTML element with text and add it to the body of the page. -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+				<!-- Latest, slim minified version of jQuery -->
+				<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+			</head>
+    </head>
+
+    <body>
+
+    </body>
+		<!-- Script that creates the p HTML element -->
+		<script type="application/javascript">
+			$(function () {
+
+				// createFamilyTree, appends an empty table to the body
+				function createFamilyTree() {
+					var table = $('<table></table>');
+					var thead = $('<thead><tr><th>Firstname</th><th>Lastname</th></tr></thead>');
+					var tbody = $('<tbody></tbody>');
+
+					table.append(thead, tbody);
+					$('body').append(table);
+				}
+
+				// addNewMember accepts firstName and lastName and appends them to the body as a new table with three rows and an X
+				function addNewMember(firstName, lastName, position) {
+					var newRow = $('<tr>').append(
+						$('<td>').text(firstName),
+						$('<td>').text(lastName),
+						$('<td>').text('(x)').css('background-color', 'orange').addClass('remove-cell').click(function() {
+							$(this).closest('tr').remove()
+						})
+					);
+
+					if (position === 'before') {
+						$('tbody').prepend(newRow);
+					} else {
+						$('tbody').append(newRow)
+					}
+				}
+
+				function createForm() {
+            // create form elements
+            var firstNameInput = $('<input>', { type: 'text', id: 'firstName', placeholder: 'First Name' });
+            var lastNameInput = $('<input>', { type: 'text', id: 'lastName', placeholder: 'Last Name' });
+            var positionSelect = $('<select>', { id: 'position' })
+                .append($('<option>', { value: 'before', text: 'Before' }))
+                .append($('<option>', { value: 'after', text: 'After' }));
+            var submitButton = $('<input>', { type: 'submit', id: 'submit', value: 'Add Member' });
+
+            // event listener for the submit button
+            submitButton.click(function(e) {
+                e.preventDefault(); // prevent the default form submission behavior
+                var firstName = firstNameInput.val();
+                var lastName = lastNameInput.val();
+                var position = positionSelect.val();
+                addNewMember(firstName, lastName, position);
+            });
+
+            // insert the form elements before the table
+            $('table').before(firstNameInput, lastNameInput, positionSelect, submitButton);
+        }
+
+				// call to create the tree
+				createFamilyTree();
+				// create form
+				createForm();
+
+			});
+		</script>
+</html>
