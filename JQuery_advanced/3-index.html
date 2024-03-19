@@ -1,0 +1,56 @@
+<!-- Task 1: Creating a DOM element: Using the append keyword, create a p HTML element with text and add it to the body of the page. -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+				<!-- Latest, slim minified version of jQuery -->
+				<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+			</head>
+    </head>
+
+    <body>
+
+    </body>
+		<!-- Script that creates the p HTML element -->
+		<script type="application/javascript">
+			$(function () {
+				function createFamilyTree() {
+					// creates a table
+					var table = $('<table>');
+					// creates the table head
+					var thead = $('<thead>').append(
+						$('<tr>').append(
+							$('<th>').text('Firstname'),
+							$('<th>').text('Lastname'),
+						)
+					);
+					// creates the table
+					var tbody = $('<tbody>').append(
+						// row 1
+						$('<tr>').append(
+							$('<td>').text('Guillaume'),
+							$('<td>').text('Salva')
+						),
+							// row 2
+						$('<tr>').append(
+							$('<td>').text('Paulette'),
+							$('<td>').text('Salva')
+						),
+						// row 3
+						$('<tr>').append(
+								$('<td>').text('Antoine'),
+								$('<td>').text('Salva')
+							)
+						)
+					// append the table head and body to the table
+					table.append(thead, tbody);
+					// append table to body
+					$('body').append(table);
+				}
+				createFamilyTree();
+			});
+		</script>
+</html>
