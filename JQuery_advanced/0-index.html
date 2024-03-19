@@ -1,0 +1,27 @@
+<!-- Task 0: Load the latest, slim minified version of jQuery, then log if jQuery was loaded correctly. -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+				<!-- Latest, slim minified version of jQuery -->
+				<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+			</head>
+    </head>
+
+    <body>
+
+    </body>
+		<!-- Script that will log whether or not jQuery was loaded correctly. -->
+		<script type="application/javascript">
+			window.onload = function() {
+				if (window.jQuery) {
+					console.log("jQuery has been loaded correctly");
+				} else {
+					console.log("jQuery has not been loaded correctly");
+				}
+			}
+		</script>
+</html>
