@@ -15,6 +15,7 @@
 		<!-- Script using jQuery -->
 		<script type="application/javascript">
 			$(function (){
+				// creates the html elements for the form and the ul attatched
 				function createSearchForm() {
 					var form = $('<form>');
 					
@@ -30,7 +31,8 @@
 						queryWikipedia(searchQuery)
 					});
 				}
-
+				
+				// creates the html elements for the results and their display format.
 				function addNewArticle(id, title, snippet) {
 					var list = $('<li>').append(
 						$('<p>').append(
@@ -42,6 +44,7 @@
 					$('form ul').append(list);
 				}
 
+				// queries the wikipedia api
 				function queryWikipedia(search) {
 					var data = {
 						action: 'query',
@@ -68,6 +71,7 @@
 						}
 					});
 				}
+				// calls the main function to load the form upon page ready
 				createSearchForm();
 			})
 		</script>
