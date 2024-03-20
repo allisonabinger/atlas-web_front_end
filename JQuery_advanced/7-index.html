@@ -34,11 +34,12 @@
 				function addNewArticle(id, title, snippet) {
 					var list = $('<li>').append(
 						$('<p>').append(
-							$('<span>').text('ID - '),
+							$('<span>').text(`${id} - `),
 							$('<b>').text(title)
 						),
 						$('<p>').html(snippet)
-					)
+					);
+					$('form ul').append(list);
 				}
 
 				function queryWikipedia(search) {
@@ -54,9 +55,10 @@
 					$.ajax({
 						url: 'https://en.wikipedia.org/w/api.php',
 						data: data,
-						dataType: 'jsonp',
+						dataType: 'json',
 						success: function(result) {
 							console.log('wikipedia API results:', result);
+							$('form ul').empty();
 							result.query.search.forEach(function(article){
 								addNewArticle(article.pageid, article.title, article.snippet);
 							});
