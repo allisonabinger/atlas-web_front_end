@@ -1,0 +1,72 @@
+<!-- Task 1: Creating a DOM element: Using the append keyword, create a p HTML element with text and add it to the body of the page. -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+			<meta charset="utf-8" />
+			<title>Task 0</title>
+			<!-- Latest, slim minified version of jQuery -->
+			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+
+    </body>
+		<!-- Script using jQuery -->
+		<script type="application/javascript">
+			$(function (){
+				function createSearchForm() {
+					var form = $('<form>');
+					
+					form.append($('<input>').attr('type', 'text'));
+					form.append($('<input>').attr('type', 'submit').val('Search'));
+					form.append($('<ul>'));
+
+					$('body').append(form);
+
+					form.on('submit', function(e) {
+						e.preventDefault();
+						var searchQuery = $('input[type="text"]').val();
+						queryWikipedia(searchQuery)
+					});
+				}
+
+				function addNewArticle(id, title, snippet) {
+					var list = $('<li>').append(
+						$('<p>').append(
+							$('<span>').text('ID - '),
+							$('<b>').text(title)
+						),
+						$('<p>').html(snippet)
+					)
+				}
+
+				function queryWikipedia(search) {
+					var data = {
+						action: 'query',
+						format: 'json',
+						list: 'search',
+						srsearch: search,
+						origin: '*',
+						utf8: 1
+					};
+
+					$.ajax({
+						url: 'https://en.wikipedia.org/w/api.php',
+						data: data,
+						dataType: 'jsonp',
+						success: function(result) {
+							console.log('wikipedia API results:', result);
+							result.query.search.forEach(function(article){
+								addNewArticle(article.pageid, article.title, article.snippet);
+							});
+						},
+						error: function(error) {
+							console.log('An error occurred while querying the wikipedia API.', error);
+						}
+					});
+				}
+				createSearchForm();
+			})
+		</script>
+</html>
