@@ -1,6 +1,6 @@
   <h1 align="center">
   <img src="insert-image-url-here" align="left" width="50">
-    Project title
+    Cookies
   <img src="insert-image-url-here" align="right" width="50"></h1>
 
 
@@ -10,15 +10,15 @@ Intro to the project, languages, concepts, etc.
 
 ## Learning Objectives
 
-1. **Learning Objective**
+1. **Understand how to create cookies using Javascript**
 
-2. **Learning Objective**
+2. **Learn how to set specific settings for the cookie**
 
-3. **Learning Objective**
+3. **Learn how to read cookies with Javascript**
 
-4. **Learning Objective**
+4. **How to use js-cookie for easy cookie manipulation**
    
-5. **Learning Objective**
+5. **How to use the browser web storage**
 
 ---
 ---
