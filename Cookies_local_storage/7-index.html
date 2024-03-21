@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		if (typeof(Storage) === "undefined") {
+				// Display an alert if session storage is not supported
+				alert("Sorry, your browser does not support Web storage. Try again with a better one");
+		} else {
+				// Define available items
+				var availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+				// Call functions to create store and display cart
+				createStore();
+				displayCart();
+		}
+
+		// parses string into json object or empty object
+		function getCartFromStorage() {
+			var cartString = sessionStorage.getItem('cart');
+			return cartString ? JSON.parse(cartString) : {};
+		}
+
+		// adds to cart
+		function addItemToCart(item) {
+			var cart = 
+		}
+	</script>
+</body>
+</html>
