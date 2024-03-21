@@ -1,0 +1,119 @@
+<!-- Task 1: Creating a DOM element: Using the append keyword, create a p HTML element with text and add it to the body of the page. -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+			<meta charset="utf-8" />
+			<title>Task 0</title>
+			<!-- Latest, slim minified version of jQuery -->
+			<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+			<style>
+				#pagination {
+					list-style-type: none;
+					display: flex;
+					justify-content: center;
+					padding: 0;
+				}
+				#pagination li.active {
+					font-weight: bold;
+				}
+				#pagination li {
+					margin-right: 10px;
+					cursor: pointer;
+				}
+			</style>
+    </head>
+
+    <body>
+
+    </body>
+		<!-- Script using jQuery -->
+		<script type="application/javascript">
+			$(function () {
+				// creates the html elements for the form and the ul attatched
+				function createSearchForm() {
+					var form = $('<form>');
+					
+					form.append($('<input>').attr('type', 'text'));
+					form.append($('<input>').attr('type', 'submit').val('Search'));
+					form.append($('<ul>'));
+
+					$('body').append(form);
+
+					$('body').append($('<ul>').attr('id', 'pagination'));
+
+					form.on('submit', function(e) {
+						e.preventDefault();
+						var searchQuery = $('input[type="text"]').val();
+						queryWikipedia(searchQuery, 0)
+					});
+				}
+				
+				// creates the html elements for the results and their display format.
+				function addNewArticle(id, title, snippet) {
+					var list = $('<li>').append(
+						$('<p>').append(
+							$('<span>').text(`${id} - `),
+							$('<b>').text(title)
+						),
+						$('<p>').html(snippet)
+					);
+					$('form ul').append(list);
+				}
+
+				// queries the wikipedia api
+				function queryWikipedia(search, offset = 0) {
+					var data = {
+						action: 'query',
+						format: 'json',
+						list: 'search',
+						srsearch: search,
+						origin: '*',
+						utf8: 1,
+						sroffset: offset,
+					};
+
+					$.ajax({
+						url: 'https://en.wikipedia.org/w/api.php',
+						data: data,
+						dataType: 'json',
+						success: function(result) {
+							console.log('wikipedia API results:', result);
+							$('form ul').empty();
+							result.query.search.forEach(function(article){
+								addNewArticle(article.pageid, article.title, article.snippet);
+							});
+
+							buildPagination(result.query.searchinfo.totalhits, 10, offset);
+
+						},
+						error: function(error) {
+							console.log('An error occurred while querying the wikipedia API.', error);
+						}
+					});
+				}
+
+				function buildPagination(numberOfItems, itemsPerPage, currentOffset) {
+					$('#pagination').empty();
+					var totalPages = Math.ceil(numberOfItems / itemsPerPage);
+
+					for (var i = 0; i < totalPages; i++) {
+							var pageNumber = i + 1;
+							var offset = i * itemsPerPage;
+							var active = currentOffset === offset;
+							var listItem = $('<li>').text(pageNumber).toggleClass('active', active);
+
+							listItem.on('click', function() {
+									var offset = $(this).text() - 1; // Calculate the offset based on the clicked page number
+									queryWikipedia($('input[type="text"]').val(), offset * itemsPerPage);
+							});
+
+							$('#pagination').append(listItem);
+					}
+				}
+
+				// calls the main function to load the form upon page ready
+				createSearchForm();
+			});
+		</script>
+</html>
