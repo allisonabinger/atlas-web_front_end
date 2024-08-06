@@ -1,41 +1,27 @@
 # Atlas - Web Front End
 
-## Dev Tools
-This project is focused on becoming more familiar with developer tools in web browsers, specifically Google Chrome.
-The tasks in this project are designed to inspect and modify web pages using Chrome's DevTools.
+## Welcome!
+This repository explores valuable and necessary tools for most front-end web designs. You'll see a variety of projects in here, from understanding concepts with tasks and small projects, to larger builds and complex designs. 
 
-### Concepts/Tools Covered:
+## Concepts/Tools Covered:
 
-- Developer Tools in Chrome
-- HTML and CSS Manipulation
-- Lighthouse Audit
+- HTML/CSS/JS
+- Responsive Design
+- Dev Tools and Accessibility
+- Bootstrap
+- Flexbox
 - Snippets and information retrieval
 - Network and Performance
 - Webpage Interaction
+- Cookies
+- and More!
 
-### Highlighted Tasks
+## Related Repositories
 
-2. **Force element state**
-	- Prompt: Force the hover state of the “cake” block in the section Portfolio. Take a screenshot of it.
-	- [Completed Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/2-pathways_menu.png)
+These concepts were used to create several web pages and projects, which can be viewed here:
 
-4. **Change button styles**
-	- Prompt: 
-		- All primary buttons (btn-primary) should have the #0080ee color as a background color.
-		- All outlined buttons light (btn-outline-light) should have #0020aa for the text color.
-	- [Completed Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/4-new_buttons.png)
+### [Smiling School](https://github.com/allisonabinger/atlas-smiling-school)
+This project was a larger site used to implement a design using Bootstrap. Using given Figma wireframes, I recreated a site for a hypothetical school needing a platform.
 
-5. **Remove part of the website**
-	- Remove the div of the “cake” box in the section Portfolio
-	- [Completed Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/5-deleted_elements.png)
-
-### Performance
-
-16. **Homepage Weight**
-	- What is the total weight of the page (with all the elements)?
-	- [Completed Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/16-weight.png)
-
-23. **Audits Panel**
-	-	What is the notation for Performance (Lighthouse)?
-	- [Completed Task](https://github.com/allisonabinger/atlas-web_front_end/blob/main/developer_tools/23-performance_audit.png)
-
+### [Smiling School - Javascript](https://github.com/allisonabinger/atlas-smiling-school-javascript)
+This project is similar to the one above, but utilizes Javascript for functionality within the site. 
